@@ -1,0 +1,7 @@
+div #element {
+  width: 600px;
+  background: red;
+  background: url("img/test.img");
+  background: url("img/test2.img") no-repeat;
+  color: rgba(100, 150, 250, 0.3);
+}
