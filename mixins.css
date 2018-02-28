@@ -1,0 +1,43 @@
+body {
+  color: blue;
+  background: green;
+  line-height: 1.8; }
+
+table {
+  color: white;
+  width: 200px; }
+  table #main {
+    color: red;
+    background: yellow; }
+
+table2 {
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4); }
+  table2 #main {
+    color: blue;
+    background: yellow; }
+
+@-webkit-keyframes myAnim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes myAnim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes myAnim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes myAnim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=mixins.css.map */

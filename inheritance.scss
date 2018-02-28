@@ -1,0 +1,41 @@
+$btn: myBtn;
+$list: el1, el2, el3;
+
+#parent ##{$btn} {
+  background: green;
+
+  #childOne {
+    background: yellow;
+    font-size: 1em;
+  }
+
+  #childTwo {
+    font-weight: 200;
+    #inner-child .content {
+      background:blue;
+    }
+  }
+
+  &.HasClass ##{$btn} {
+    background: red;
+    font-weight: 900;
+    font-style: italic;
+  }
+}
+
+// Placeholder... used to extend parent/child
+%shared{
+  background: green;
+  font-size: 2em;
+}
+#parent %foo .child {
+  background: yellow;
+  font-size: 1em;
+}
+
+.content{ @extend %shared; line-height: 2em;}
+.divTwo { @extend %foo; }
+
+.sign, video, img, #{$list} {
+  @extend %shared;
+}

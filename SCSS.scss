@@ -1,5 +1,35 @@
-$col1:blue;
+// Numbers
+$width: 600px;  $float: 1.5;  $int: 20;
+// Strings
+$col1:red;
+$string1: "img/test.img";  // Strings are case sensitives
+$string2: 'img/test2.img'; // css optimized to double quotes
+$string3: no-repeat;       // don't need quotes for a string
+$selector: element;        // set selector /w # & {}
 
-html{
+//Colors
+$colString: gray;
+$hex: #def;
+$rgb: rgb(230, 230, 230); // note this converts to hex (cuz it's shorter)
+$rgba: rgba(100,150,250,0.3);
+
+//Lists
+// technically colors, strings, and numbers are all lists of length 1.
+// note they're separated by commas
+$list:  1px 1px 3px black,
+        3px 3px 4px #f00;
+
+// Maps
+$map: ( "key1":"val1", "color": blue );
+// Bools
+$bool: true;
+// Nulls
+$null: null;
+
+div ##{$selector} {
+  width: $width;
   background:$col1;
+  background: url($string1);
+  background: url($string2) $string3;
+  color: $rgba;
 }
