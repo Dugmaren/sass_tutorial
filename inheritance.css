@@ -1,0 +1,26 @@
+#parent #myBtn {
+  background: green; }
+  #parent #myBtn #childOne {
+    background: yellow;
+    font-size: 1em; }
+  #parent #myBtn #childTwo {
+    font-weight: 200; }
+    #parent #myBtn #childTwo #inner-child .content {
+      background: blue; }
+  #parent #myBtn.HasClass #myBtn {
+    background: red;
+    font-weight: 900;
+    font-style: italic; }
+
+.content, .sign, video, img, el1, el2, el3 {
+  background: green;
+  font-size: 2em; }
+
+#parent .divTwo .child {
+  background: yellow;
+  font-size: 1em; }
+
+.content {
+  line-height: 2em; }
+
+/*# sourceMappingURL=inheritance.css.map */
