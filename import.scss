@@ -1,0 +1,29 @@
+@import 'inheritance.css';
+
+// Don't need to use file extension on
+// sass / scss files
+//
+// Also note it imported the compiled css
+// file, not the scss one
+//
+// You CAN criss-cross syntax SASS / SCSS when
+// you import files. As long as the files themselves
+// stay true to their correct syntax.
+@import 'mixins';
+
+// Note - don't try to import the variables or
+// mixins from the CSS, you obviously need to
+// use the SCSS or SASS files for that.
+html {
+  background: $color;
+  @include cssProps();
+}
+
+div {
+  @include cssPropz(black);
+}
+
+// If you have a partial file (ie something you
+// want to import),
+// _prefix it's filename with an underscore
+// This excludes them from the --watch command

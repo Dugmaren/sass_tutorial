@@ -1,0 +1,62 @@
+$color: blue;
+
+@mixin cssProps {
+  color: blue;
+  background: green;
+  line-height: 1.8;
+}
+body {
+  @include cssProps();
+}
+
+// You can pass multiple variables here like,
+// cssPropx($arg1, $arg2)
+@mixin cssPropz($arg1) {
+  #main{
+    color: $arg1;
+    background: yellow;
+  }
+}
+
+//@mixin boxShadow($shadow)
+// The ... after the variable for this mixin
+// allows you to send a list variable like,
+// 1px 2px 3px red, 4px 4px 2px gray;
+@mixin boxShadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+table {
+  color: white;
+  width: 200px;
+
+  @include cssPropz(red);
+}
+table2 {
+  @include cssPropz($color);
+  @include boxShadow(1px 2px 3px rgba(0,0,0,.4));
+}
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(myAnim) {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+};
