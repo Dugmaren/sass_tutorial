@@ -1,0 +1,40 @@
+$list1: 200px;
+//$list2: 1px 2px 3px red;
+
+// By post-fixing a comma to this list, it designates where to place
+// the separator comma if you're going to join this list, otherwise
+// commas are put in between each list value here 1px, 2px, 3px, red
+$list2: 1px 2px 3px red,;
+$list3: Helvetica, Arial, sans-serif;
+
+$listn: 1px 2px 3px red, 2px 3px 4px green, 3px 4px 5px blue;
+
+// length($list1) = 1
+// length($list2) = 4 .. there are 4 items
+// length($listn) = 3 .. returns 3 items (comma sep) at the root level
+
+// nth($listn, 2)     .. return the 2nd value of listn
+
+// set-nth(a, b, c)   .. changes the targeted value, THEN returns list
+//    a = list, b = value to replace, c = value replaced with this
+
+// list-separator()   .. returns spaces or commas etc
+
+// join(a, b, c)      .. joins values together
+//  a = list 1, b = list 2, c = separator (comma, or space)
+//  additionally you can just add your own hardcoded string as
+//  one of the lists.  This works the same as,
+// append(a, b, c)   where b is appended onto the end (c is optional)
+
+// index(a, b)        .. a = list, b = value searching for
+//  must match quotes or none, and case
+// index($listn, red) will not work.. red is only a part of a value
+
+// zip(list, list, list) .. multijoin I guess
+html {
+  width: length($list2);
+  background: nth($listn, 2);
+  color: set-nth($listn, 1, 5px 6px 7px red);
+  h1: join($list2, $listn, comma);
+  h2: index($list3, Arial);
+}

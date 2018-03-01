@@ -1,0 +1,10 @@
+$type : element;
+$num : 10;
+$noValue : null;
+$eq : $num - 2;
+
+html {
+  @if $type != element { content: "yup it's true!"; }
+  @else if $eq < 10 { content: "also an option"; }
+  @else { content: "faaaalse"; }
+}

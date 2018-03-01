@@ -1,0 +1,31 @@
+// No spaces or special characters in keys
+// key can be any acceptable data type, including MAPS
+// keys are CASE SENSITIVE
+$map1 : (
+  'name1' : 'value',
+  'name2' : 200px
+);
+
+$map2: (
+  'key1'  : 'stuff',
+  'string' : string,
+  'number' : 107,
+  'list' : (1px 2px 3px blue),
+  'nmap' : (
+    'nkey1' : 'nesting!',
+    'width' : 300px
+  )
+);
+
+// map-keys(map)    returns all of the keys
+// map-values(map)  returns all values in maps
+// map-has-key(map, key)  returns boolean if key found
+// map-get(map, key)  returns value for that key
+
+// inspect() escapes the output
+// inspect(map-merge(map, map)) returns merged maps
+// inspect(map-remove(map, key, key, key*)) removes a key:value pair
+.foo {
+  content: map-keys($map1);
+  inspect(map-remove($map1, 'name2'));
+}

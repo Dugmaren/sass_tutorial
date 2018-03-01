@@ -1,0 +1,20 @@
+$headers: h1, h2, h3, h4, h5, h6;
+$fontSize: 55px, 45px, 40px, 30px, 25px, 15px;
+
+// We named the fn list-match
+// variable scoping on $list, $list2 && $len, $len2
+@function list-match($list, $list2){
+    $len : length($list);
+    $len2 : length($list2);
+
+//    @if $len == $len2 { @return "Yup" }
+//    @else { @return "Nope "}
+
+    $test : 1;
+    @if $len == $len2 { $test : 2; }
+    @else { $test : 3;}
+
+    @return $test;
+}
+
+html { width: list-match($headers, $fontSize);}

@@ -1,0 +1,23 @@
+$a : 16;
+$b : 32px;
+$c : 40px;
+
+// Can make equations as variables
+$eq : 4 - ($a + 17);
+
+// Note SCSS handles the *px np
+// also uses brackets np
+
+// floor(#) / ceil(#) / round(#)  rounding...
+// percentage(#) adds the % character
+// if you give a base # to a width etc. it
+//    will auto add the 'px'
+// abs(#) min(list) max(list)
+// random() returns 0.00 --> 0.99
+// random(#) returns 1 --> #
+
+div {
+  width: 5 + 6 + $b;
+  height: 4 - ($a + 5);
+  content: round($eq);
+}
